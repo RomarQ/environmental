@@ -14,9 +14,8 @@
 
 use super::*;
 
-// This code is a simplified version of [`LocalKey`] and it's wasm32 specialization: [`statik::Key`].
-// [`LocalKey`]: https://github.com/alexcrichton/rust/blob/98931165a23a1c2860d99759385f45d6807c8982/src/libstd/thread/local.rs#L89
-// [`statik::Key`]: https://github.com/alexcrichton/rust/blob/98931165a23a1c2860d99759385f45d6807c8982/src/libstd/thread/local.rs#L310-L312
+// This code is a simplified version of [`LocalKey`].
+// [`LocalKey`]: https://github.com/rust-lang/rust/blob/c53af1ccd0305906c2c0aa7c561df99dbc9a4a35/library/std/src/thread/local.rs#L106
 
 pub struct LocalKey<T: 'static> {
 	pub init: fn() -> T,
